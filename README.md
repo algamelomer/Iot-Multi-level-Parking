@@ -1,4 +1,4 @@
-# Multi-Level Car Garage esp32 Code
+# Multi-Level Car Garage Esp32 Code
 
 This repository contains the Arduino code for the **Multi-Level Car Garage Project**, a smart parking system designed to efficiently manage vehicles across multiple levels using automated mechanisms.
 
@@ -7,6 +7,14 @@ This repository contains the Arduino code for the **Multi-Level Car Garage Proje
 ## 📖 Overview
 
 The code leverages an **Arduino-based microcontroller** to control stepper motors and manage the garage's movement system. It includes functionality for Bluetooth communication, enabling remote operation and efficient vehicle placement in designated slots.
+
+---
+
+## 📊 System Diagram
+
+Below is the system diagram of the multi-level car garage showing how the parking structure and automated mechanisms are organized:
+
+![Parking Diagram](parking_diagram.png)
 
 ---
 
