@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Level Car Garage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+            --container-bg: #1e1e1e;
+            --box-shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        body.light-mode {
+            --bg-color: #ffffff;
+            --text-color: #121212;
+            --container-bg: #f0f0f0;
+            --box-shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 20px;
+            border-bottom: 2px solid #333;
+            text-align: center;
+            position: relative;
+        }
+
+        .container img {
+            width: 120px;
+            height: 110px;
+            margin-bottom: 10px;
+        }
+
+        .container h6 {
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .toggle-btn i {
+            margin-right: 8px;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        body.light-mode .toggle-btn {
+            background-color: #ddd;
+            color: #121212;
+        }
+
+        body.light-mode .toggle-btn i {
+            transform: rotate(180deg);
+        }
+
+        .main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--container-bg);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--box-shadow);
+        }
+
+        .main p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .image-figure {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .image-figure img,
+        .image-figure video {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px var(--box-shadow);
+        }
+
+        @media (max-width: 768px) {
+            .container img {
+                width: 100px;
+                height: 90px;
+            }
+
+            .container h6 {
+                font-size: 16px;
+            }
+
+            .main p {
+                font-size: 16px;
+            }
+
+            .image-figure img,
+            .image-figure video {
+                width: 90%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/batu.png" alt="Logo">
+        <h6>BORG AL ARAB TECHNOLOGICAL UNIVERSITY<br>COLLEGE OF INDUSTRY AND ENERGY<br>INFORMATION TECHNOLOGY DEPARTMENT</h6>
+        <button class="toggle-btn" id="darkModeToggle">
+            <i id="darkModeIcon">☀️</i>
+            Light Mode
+        </button>
+    </div>
+
+    <div class="main">
+        <p><strong>The Multi-Level Car Garage Project</strong> introduces an innovative solution for urban parking challenges. It features a modern, compact design that maximizes the number of parking spaces by utilizing vertical space efficiently. The garage is equipped with automated mechanisms to move vehicles between levels, reducing the time and effort needed for parking and retrieval. This project provides a safe, organized, and sustainable approach to managing increasing parking demands in urban environments.</p>
+
+        <figure class="image-figure">
+            <img src="img/IMG_20230503_044542_149.jpg" alt="Multi-Level Car Garage 1">
+            <img src="img/IMG_20230503_044542_865.jpg" alt="Multi-Level Car Garage 2">
+            <img src="img/IMG-20230503-WA0096.jpg" alt="Multi-Level Car Garage 3">
+            <img src="img/IMG-20230503-WA0116.jpg" alt="Multi-Level Car Garage 4">
+            <img src="img/IMG-20230505-WA0054.jpg" alt="Multi-Level Car Garage 5">
+        </figure>
+        
+        <figure class="image-figure">
+            <video src="img/VID-20230503-WA0028.mp4" controls>Video</video>
+        </figure>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const icon = document.getElementById('darkModeIcon');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const isLightMode = body.classList.contains('light-mode');
+            icon.textContent = !isLightMode ? '☀️' : '🌙';
+            toggleBtn.textContent = !isLightMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+        });
+    </script>
+</body>
+</html>
