@@ -7,7 +7,7 @@ This repository contains the Arduino code for the **Multi-Level Car Garage Proje
 ## 📖 Overview
 
 The code leverages an **Arduino-based microcontroller** to control stepper motors and manage the garage's movement system. It includes functionality for Bluetooth communication, enabling remote operation and efficient vehicle placement in designated slots.
-
+![Overview](IMG-20230505-WA0054.jpg)
 ---
 
 ## 📊 System Diagram
